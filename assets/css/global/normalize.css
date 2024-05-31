@@ -27,10 +27,3 @@ body {
     );
     color: var(--color-white);
 }
-
-@media screen and (max-width: 576px) {
-    html,
-    body {
-        background-color: var(--color-purple);
-    }
-}

@@ -121,12 +121,12 @@
 
     .ball {
         top: 50%;
-        left: -10%;
+        left: 0%;
     }
 
     .square {
         top: 18%;
-        left: 78%;
+        left: 68%;
     }
 
     .search-cep-area {
