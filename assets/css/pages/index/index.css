@@ -112,3 +112,33 @@
     line-height: 36px;
     text-align: center;
 }
+
+@media screen and (max-width: 576px) {
+    .container {
+        grid-template: 232px auto / 100%;
+        padding: 1rem;
+    }
+
+    .ball {
+        top: 50%;
+        left: -10%;
+    }
+
+    .square {
+        top: 18%;
+        left: 78%;
+    }
+
+    .search-cep-area {
+        padding: 1rem;
+    }
+
+    .search-cep {
+        grid-template: 53px / 60% 53px;
+        justify-content: center;
+    }
+
+    .result-area > p {
+        font-size: var(--sm);
+    }
+}
