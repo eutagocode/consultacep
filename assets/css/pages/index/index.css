@@ -1,0 +1,81 @@
+.container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template: 232px 200px / 430px;
+    justify-content: center;
+    align-content: center;
+    gap: 1.75rem;
+}
+
+.search-cep-area {
+    background-color: rgb(255, 255, 255, 0.25);
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow-container);
+    border: 1px solid rgba(255, 255, 255, 0.329);
+    backdrop-filter: blur(4px);
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    gap: 3.25rem;
+}
+
+.search-cep-area > h1 {
+    text-align: center;
+    font-family: var(--figtree);
+    font-size: var(--md);
+    line-height: 2.5rem;
+}
+
+.search-cep-area > h1 > span {
+    color: var(--color-yellow);
+}
+
+.search-cep {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template: 53px / 300px 53px;
+    gap: 0.5rem;
+}
+
+.search-cep > input {
+    background-color: var(--color-white);
+    border-radius: 100px;
+    padding: 0rem 1rem;
+    font-family: var(--figtree);
+    font-size: var(--sm);
+    color: var(--color-black);
+    box-shadow: var(--shadow-input);
+    text-align: center;
+}
+
+.search-cep > input::placeholder {
+    color: var(--color-gray);
+}
+
+.search-cep > button {
+    border-radius: 100px;
+    box-shadow: var(--shadow-input);
+    text-align: center;
+    background-color: var(--color-white);
+    cursor: pointer;
+    transition: all 0.5s linear;
+}
+
+.search-cep > button:hover {
+    background: linear-gradient(
+        43deg,
+        var(--color-purple) 0%,
+        var(--color-pink) 46%,
+        var(--color-yellow) 100%
+    );
+}
+
+.result-area {
+    background-color: rgb(255, 255, 255, 0.25);
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow-container);
+    border: 1px solid rgba(255, 255, 255, 0.329);
+    backdrop-filter: blur(4px);
+}
