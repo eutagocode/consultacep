@@ -1,21 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="./assets/css/index.css" />
+        <script src="https://unpkg.com/scrollreveal"></script>
         <title>ConsultaCEP</title>
     </head>
     <body>
         <main class="container">
+            <div class="ball"></div>
+            <div class="square"></div>
             <div class="search-cep-area">
                 <h1>Consulta<span>CEP</span></h1>
                 <form class="search-cep">
                     <input
+                        id="input-search"
                         type="text"
                         placeholder="Digite o CEP que deseja..."
+                        autofocus
                     />
-                    <button>
+                    <button id="button-search">
                         <img
                             src="./assets/docs/images/search.svg"
                             alt="Ícone de busca"
@@ -23,7 +28,9 @@
                     </button>
                 </form>
             </div>
-            <div id="result-area" class="result-area"></div>
+            <div id="result-search" class="result-area"></div>
         </main>
+        <script src="./assets/js/state.js"></script>
+        <script src="./assets/js/app.js"></script>
     </body>
 </html>
