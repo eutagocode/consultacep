@@ -50,4 +50,6 @@ const sr = ScrollReveal({
     duration: 2500,
     distance: "80px",
 });
+
 sr.reveal(".search-cep-area", { origin: "top", delay: 500 });
+sr.reveal(".search-cep-area", { origin: "top", dalay: 500 });
