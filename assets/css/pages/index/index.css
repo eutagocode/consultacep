@@ -1,15 +1,35 @@
 .container {
-    position: relative;
     height: 100%;
     width: 100%;
     display: grid;
-    grid-template: 232px 200px / 430px;
+    grid-template: 232px auto / 430px;
     justify-content: center;
     align-content: center;
     gap: 1.75rem;
 }
 
+.ball {
+    width: 167px;
+    height: 167px;
+    background-color: var(--color-yellow);
+    border-radius: 167px;
+    position: absolute;
+    top: 50%;
+    left: 35%;
+}
+
+.square {
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    border: 13px solid var(--color-purple);
+    position: absolute;
+    top: 28%;
+    left: 58%;
+}
+
 .search-cep-area {
+    position: relative;
     background-color: rgb(255, 255, 255, 0.25);
     border-radius: 0.5rem;
     box-shadow: var(--shadow-container);
@@ -78,4 +98,17 @@
     box-shadow: var(--shadow-container);
     border: 1px solid rgba(255, 255, 255, 0.329);
     backdrop-filter: blur(4px);
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: auto;
+    grid-auto-rows: 40px;
+    gap: 1rem;
+}
+
+.result-area > p {
+    font-family: var(--figtree);
+    font-size: var(--md);
+    color: var(--color-white);
+    line-height: 36px;
+    text-align: center;
 }
