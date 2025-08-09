@@ -7,8 +7,11 @@ if (resultSearch.innerHTML == "") {
     resultSearch.style.display = "none";
 }
 
-buttonSearch.addEventListener("click", (event) => {
+buttonSearch.addEventListener("click", async (event) => {
     event.preventDefault();
+
+    resultSearch.innerHTML = "";
+
     let zipCode = zipCodeField.value;
 
     zipCode = zipCode.replace("-", "");
@@ -18,20 +21,23 @@ buttonSearch.addEventListener("click", (event) => {
 
     const api = `https://viacep.com.br/ws/${zipCode}/json/`;
 
-    fetch(api)
-        .then(async (response) => await response.json())
-        .then((data) => {
-            resultSearch.style.display = "grid";
-            createLine(`${data.localidade} - ${data.uf}`);
-            createLine(setState(data.uf));
-            createLine(data.logradouro);
-            createLine(data.bairro);
-        })
-        .catch(() => {
-            createLine("Ops, algo deu errado!");
-        });
+    try {
+        const response = await fetch(api);
 
-    resultSearch.innerHTML = "";
+        if (!response.ok) throw new Error("Erro na requisição");
+
+        const data = await response.json();
+
+        if (data.erro) throw new Error("Erro na requisição");
+
+        resultSearch.style.display = "grid";
+        createLine(`${data.localidade} - ${data.uf}`);
+        createLine(setState(data.uf));
+        createLine(data.logradouro);
+        createLine(data.bairro);
+    } catch (error) {
+        createLine("Ops, algo deu errado!");
+    }
 });
 
 const createLine = (data) => {

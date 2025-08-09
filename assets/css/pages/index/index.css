@@ -29,7 +29,6 @@
 }
 
 .search-cep-area {
-    position: relative;
     background-color: rgb(255, 255, 255, 0.25);
     border-radius: 0.5rem;
     box-shadow: var(--shadow-container);
@@ -95,6 +94,10 @@
     );
 }
 
+.search-cep > button > p {
+    display: none;
+}
+
 .result-area {
     background-color: rgb(255, 255, 255, 0.25);
     border-radius: 0.5rem;
@@ -106,7 +109,7 @@
     padding: 2rem;
     display: grid;
     grid-template-columns: auto;
-    grid-auto-rows: 40px;
+    grid-auto-rows: auto;
     gap: 1rem;
     z-index: 999;
 }
@@ -125,26 +128,31 @@
         padding: 1rem;
     }
 
-    .ball {
-        top: 50%;
-        left: 0%;
-    }
-
-    .square {
-        top: 18%;
-        left: 68%;
-    }
-
     .search-cep-area {
         padding: 1rem;
     }
 
     .search-cep {
-        grid-template: 53px / 60% 53px;
+        grid-template: 53px 53px / 100%;
+    }
+
+    .search-cep > button {
+        background-color: var(--color-purple);
+        display: flex;
         justify-content: center;
+        align-items: center;
+        gap: 0.8rem;
+    }
+
+    .search-cep > button > p {
+        display: block;
+        font-family: var(--figtree);
+        font-size: var(--sm);
+        color: var(--color-yellow);
+        text-transform: uppercase;
     }
 
     .result-area > p {
-        font-size: var(--sm);
+        font-size: var(--md);
     }
 }
