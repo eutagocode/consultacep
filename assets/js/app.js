@@ -38,6 +38,8 @@ buttonSearch.addEventListener("click", async (event) => {
     } catch (error) {
         createLine("Ops, algo deu errado!");
     }
+
+    zipCodeField.value = "";
 });
 
 const createLine = (data) => {
